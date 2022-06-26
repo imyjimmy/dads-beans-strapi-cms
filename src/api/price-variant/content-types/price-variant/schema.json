@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "price_variants",
+  "info": {
+    "singularName": "price-variant",
+    "pluralName": "price-variants",
+    "displayName": "priceVariant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "size": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "price_variants"
+    }
+  }
+}
